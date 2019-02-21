@@ -1,0 +1,7 @@
+Script para solucionar el problema de bloqueo de actualizaciones linux
+
+(Solución) No se pudo bloquear /var/lib/apt/lists/lock – open (11 Recurso temporalmente no disponible)
+
+sudo fuser -vki  /var/lib/dpkg/lock
+sudo dpkg --configure –a
+sudo apt update && sudo apt upgrade
